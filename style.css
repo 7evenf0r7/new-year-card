@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #f4efe6;
+  color: #1e352f;
+}
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  padding: 36px 28px;
+  text-align: center;
+  background: #fffdf9;
+  border-radius: 24px;
+  border: 2px solid #e2d5be;
+  box-shadow: 0 14px 30px rgba(30, 53, 47, 0.08);
+  animation: appear 0.8s ease-out both;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scene {
+  width: 220px;
+  height: 150px;
+  margin: 0 auto 16px;
+}
+
+.tree {
+  transform-origin: 85px 135px;
+  animation: treeSway 3.5s ease-in-out infinite;
+}
+
+@keyframes treeSway {
+  0%, 100% { transform: rotate(-1.5deg); }
+  50% { transform: rotate(1.5deg); }
+}
+
+.star {
+  transform-origin: 85px 22px;
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+.light-1 { animation: blink 1.6s ease-in-out infinite; }
+.light-2 { animation: blink 1.6s ease-in-out 0.5s infinite; }
+.light-3 { animation: blink 1.6s ease-in-out 1s infinite; }
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.18); opacity: 0.75; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+.goat {
+  transform-origin: 155px 132px;
+  animation: goatHop 2.4s ease-in-out infinite;
+}
+
+@keyframes goatHop {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  30% { transform: translateY(-6px) rotate(-2deg); }
+  60% { transform: translateY(0) rotate(1deg); }
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 14px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #a64b2a;
+  background: #faede6;
+  border-radius: 999px;
+}
+
+.year {
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 1;
+  color: #1e352f;
+  margin-bottom: 14px;
+}
+
+.divider {
+  width: 50px;
+  height: 2px;
+  background: #d4a359;
+  margin: 0 auto 16px;
+}
+
+.wish {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4a5d57;
+}
